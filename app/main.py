@@ -14,7 +14,7 @@ def create_person_list(people: list) -> list:
         if name not in Person.people:
             instance = Person(name, age)
             Person.people[name] = instance
-            if partner_name:
+            if person.get("wife") or person.get("husband"):
                 for partner in people:
                     partner_real_name, partner_age, *_ = partner.values()
                     if partner_name == partner_real_name:
