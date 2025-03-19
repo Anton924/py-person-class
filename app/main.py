@@ -18,7 +18,7 @@ def create_person_list(people: list) -> list:
                 for partner in people:
                     partner_real_name, partner_age, *_ = partner.values()
                     if partner_name == partner_real_name:
-                        if 'wife' in person:
+                        if "wife" in person:
                             new_instance = Person(partner_real_name,
                                                   partner_age)
                             instance.wife = new_instance
