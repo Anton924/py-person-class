@@ -29,6 +29,6 @@ def create_person_list(people: list) -> list:
                             instance.husband = new_instance
                             new_instance.wife = instance
         else:
-            instance = dict.get(name)
+            instance = Person.people.get(name)
         result.append(instance)
     return result
